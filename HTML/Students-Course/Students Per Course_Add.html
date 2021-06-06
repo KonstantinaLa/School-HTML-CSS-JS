@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-color: #ccc0c0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Poppins', 'Arial Nova';
+            color: #222;
+        }
+
+        .navbar {
+            padding: 0.8rem;
+            background-color: #92bdba;
+        }
+
+        .navbar-nav li {
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+
+        .nav-link {
+            font-size: 1.1em !important;
+        }
+
+        .btn-sub {
+            background-color: #093ebb;
+            color: #e2d9d9;
+        }
+
+        .btn-add {
+            background-color: #574db5;
+            color: #e1e1e1;
+            margin-right: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <!--First Header Row-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light sticky-top">
+
+                    <a class="navbar-brand" href="../../Index.html"><img src="../../MEDIA/foto/hat.png" alt="Logo hat" width="70" /></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link p-0" data-toggle="tooltip" href="../Students/Students.html">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers/Trainers.html">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0 " href="../Courses/Courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments/Assignments.html">Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers-Course/Trainers Per Course.html">Trainers-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Students-Course/Students Per Course.html">Students-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments-Course/Assignments Per Course.html">Assignments-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Ass-Stu-Course/Assignment Per Student Per Course.html">Assignments-Students-Course</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+
+
+        <!--Edit Student course-->
+        <div class="row">
+            <div class="col">
+
+                <div class="container p-3">
+
+                    <h1 class="mb-5 p-3">Create Students-Course</h1>
+
+                    <div class="mt-4 mb-0">
+                        <a class="btn btn-lg btn-add m-3 float-right" href="Students Per Course.html">Return to Students-Course</a>
+                    </div>
+                    <br />
+                    <br />
+                    <form class="m-1">
+
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <input id="course" class="form-control" type="text" name="course"   placeholder="Course Title" autocomplete="off" required />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="stream">Stream *</label>
+                            <select id="stream" name="stream" class="form-control" required>
+                                <option>Part Time</option>
+                                <option>Full Time</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Type *</label>
+                            <select id="type" name="type" class="form-control" required>
+                                <option>Online</option>
+                                <option>Natural Presence</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="students">Stundets* </label>
+
+                            <br />
+                            <input type="checkbox" id="student" name="student" value="Konstantinos Kanistras" >
+                            <label for="student">Konstantinos Kanistras</label>
+                            <br />
+                            <input type="checkbox" id="student" name="student" value="Marios Papadatos">
+                            <label for="student">Marios	Papadatos</label>
+                            <br />
+                            <input type="checkbox" id="student" name="student" value="Katerina Antoniou" >
+                            <label for="student">Katerina Antoniou</label>
+                            <br />
+                            <input type="checkbox" id="student" name="student" value="Manolis Papadopoulos">
+                            <label for="student">Manolis Papadopoulos</label>
+
+
+
+                        </div>
+
+                        <button class="btn btn-sub btn-lg form-control">Save Changes</button>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+</html>

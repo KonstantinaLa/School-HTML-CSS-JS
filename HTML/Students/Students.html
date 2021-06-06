@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-color: #ccc0c0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Poppins', 'Arial Nova';
+            color: #222;
+        }
+        .btn-add{
+            background-color:#574db5;
+            color:#e1e1e1;
+            margin-right:100px;
+        }
+        .btn-form {
+            background-color: #df9547;
+            color: #e0d0d0;
+        }
+        
+        .btn-red {
+            background-color: #e55e5e;
+            color: #e0d0d0;
+        }
+
+        .navbar {
+            padding: 0.8rem;
+            background-color: #92bdba;
+        }
+
+        .navbar-nav li {
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+
+        .nav-link {
+            font-size: 1.1em !important;
+        }
+        .btn-edit {
+            background-color: #4853ae;
+            color: #e0d0d0;
+        }
+        .thead-color {
+            background-color: #b9c1c2;
+        }
+        .btn-sub {
+            background-color: #093ebb;
+            color: #e2d9d9;
+        } 
+
+       
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+
+        <!--First Header Row-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light sticky-top">
+
+                    <a class="navbar-brand" href="../../Index.html"><img src="../../MEDIA/foto/hat.png" alt="Logo hat" width="70" /></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link p-0" data-toggle="tooltip" href="../Students/Students.html">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers/Trainers.html">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0 " href="../Courses/Courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments/Assignments.html">Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers-Course/Trainers Per Course.html">Trainers-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Students-Course/Students Per Course.html">Students-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments-Course/Assignments Per Course.html">Assignments-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Ass-Stu-Course/Assignment Per Student Per Course.html">Assignments-Students-Course</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <div class="container-fluid">
+
+        <!--list of Students-->
+        <div class="row">
+            <div class="col">
+
+                <div class="container-lg container-fluid">
+                    <h1 class="mt-5">All Students</h1>
+                    <div class=" mt-4 mb-0 ">
+                        <a class="btn btn-lg btn-add m-3 float-right" href="Students_Add.html">Add Student</a>
+                    </div>
+
+                    <div class="mt-4 mb-0">
+                        <table class="table table-hover">
+                            <thead class="thead-color">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Date of Birth</th>
+                                    <th>Tuition Fees</th>
+                                    <th>Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--<tr>
+                                    <td class="studentData" name="fname">Konstantinos</td>
+                                    <td class="studentData" name="lname">Kanistras</td>
+                                    <td>2/9/1999</td>
+                                    <td>200</td>
+                                    <td align="center">
+                                        <div class="btn-group">
+                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
+                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marios</td>
+                                    <td>Papadatos</td>
+                                    <td>2/9/1990</td>
+                                    <td>300</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
+                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Katerina</td>
+                                    <td>Antoniou</td>
+                                    <td>15/4/1990</td>
+                                    <td>200</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
+                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
+
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Manolis</td>
+                                    <td>Papadopoulos</td>
+                                    <td>1/4/1998</td>
+                                    <td>250</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
+                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
+
+                                        </div>
+                                    </td>
+                                </tr>-->
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!--Forma symplhrvshw-->
+        <div class="container mt-5">
+            <button id="addbtn" class="btn btn-add mb-4"> Open Add Student</button>
+            <form id="StudentForm" action="">
+                <div class="form-group">
+                    <label for="firstName">First Name *</label>
+                    <input id="firstName" class="form-control" type="text" name="firstName" value="" placeholder="Enter letters only(length must be 2-15)" autocomplete="off" required pattern="[A-Za-z]{2,15}" title="Only letters and between 2 and 15 characters" />
+
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name *</label>
+                    <input id="lastName" class="form-control" type="text" name="lastName" value="" placeholder="Enter letters only(length must be 2-15)" autocomplete="off" required pattern="[A-Za-z]{2,15}" title="Only letters and between 2 and 15 characters" />
+
+                </div>
+                <div class="form-group">
+                    <label for="dateOfBirth">Birth Date ()from 01-01-195- to 31-12-2003) *</label>
+                    <input id="dateOfBirth" class="form-control" type="date" name="dateοfBirth" required min="1950-01-01" max="2003-12-31" />
+
+                </div>
+                <div class="form-group">
+                    <label for="tuitionFees">Tuition Fees *</label>
+                    <input id="tuitionFees" class="form-control" type="number" name="tuitionFees" placeholder="Number from 0-10.000" autocomplete="off" required min="0" max="10000" />
+
+                </div>
+
+                <button id="formSubmit" class="btn btn-sub btn-lg mt-4" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h4 class="modal-title" id="ModalLabel"></h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+
+    <script>
+
+        //den epitrepei na staloyn ta dedomena kai kani refresh
+
+        $("form").submit(function (e) {
+            e.preventDefault();
+        });
+
+        $("#StudentForm").hide();
+
+        $("#addbtn").click(function () {
+            $("#StudentForm").slideToggle();
+            $(this).text($(this).text() == "Close Form Students" ? "Open Form Students" : "Close Form Students" );
+            $(this).toggleClass("btn-form");     //ALLAXE TO XROMA
+        });
+
+        function Student(id, firstName, lastName, dateOfBirth, tuitionFees) {
+            this.id = id;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.dateOfBirth = dateOfBirth;
+            this.tuitionFees = tuitionFees;
+
+        }
+
+        var stu1 = new Student(1,"Konstantinos", "Kanistras","2/9/1998" , 200)
+        var stu2 = new Student(2, "Marios", "Papadatos", "12/9/1990" , 300)
+        var stu3 = new Student(3, "Katerina", "Antoniou", "15/4/1992" , 200)
+        var stu4 = new Student(4, "Manolis", "Papadopoulos", "1/4/1998" , 250)
+
+        var students = [stu1, stu2, stu3, stu4];
+
+        $.each(students, function (i, student) {
+            appendToStundentTable(student);
+        });
+
+        function appendToStundentTable(student) {
+
+            $("table > tbody:last-child").append(`
+                                              <tr id="stu-${student.id}">
+                                                 <td class="studentData" name="id">${student.id}</td>
+                                                 <td class="studentData" name="firstname">${student.firstName}</td>
+                                                 <td class="studentData" name="lastname">${student.lastName}</td>
+                                                 <td class="studentData" name="dateOfBirth">${student.dateOfBirth}</td>
+                                                 <td class="studentData" name="tuitionFees">${student.tuitionFees}</td>
+                                                 <td align="center">
+                                                     <div class="btn-group">
+                                                         <button class="btn btn-edit m-1 rounded-left form-control rounded-right" onClick ="editStudent(${student.id})" data-toggle ="modal data-target="#Modal")">Edit</button>
+                                                         <button class="btn btn-red m-1 rounded-left form-control rounded-right" onClick ="deleteStudent(${student.id})" data-toggle ="modal data-target="#Modal">Delete</button>
+
+                                                     </div>
+                                                 </td>
+                                             </tr>
+                                            `);                                 
+
+        }
+
+
+        $("form#StudentForm").submit(function () {
+            var student = {}; 
+            var nameInput = $('input[name = "firstName"]').val();
+            var lastnameInput = $("input[name = 'lastName']").val();
+            var dateofBirthInput = $("input[name = 'dateofBirth']").val();
+            var tuitionFeesInput = $("input[name = 'tuitionFees']").val();
+
+            
+            student["firstName"] = nameInput;
+            student["lastName"] = lastnameInput;
+            student["dateofBirth"] = dateofBirthInput;
+            student["tuitionFees"] = tuitionFeesInput;
+            student.id = students[students.length - 1].id + 1;
+
+
+
+            students.push(student);
+            var msg = "Student have succesfully created";
+            flashMessage(msg);
+            appendToStundentTable(student);
+
+            $('input[name = "firstName"]').val('');
+            $('input[name = "lastName"]').val('');
+            $('input[name = "dateofBirth"]').val('');
+            $('input[name = "tuitionFees"]').val('');
+
+
+        });
+
+
+        function deleteStudent(id) {
+            var action = confirm("Do you want to delete this student?");
+            var msg = "Student deleted succesfully";
+            students.forEach(function (stu, i) {
+                if (stu.id == id && action != false) {
+                    students.splice(i, 1);
+                    $("table #stu-" + stu.id).remove();
+                    flashMessage(msg);
+                }
+            });
+        }
+            
+
+        function editStudent(id) {
+
+            students.forEach(function (stu, i) {
+                if (stu.id === id) {
+                    $(".modal").modal("toggle");
+
+                    $("#ModalLabel").text('Edit Student: ' + stu.firstName + " " + stu.lastName);
+
+                    $(".modal-body").empty();
+                    $(".modal-body").append(` 
+                                                <form id="updateStudent" action="" onsubmit="updateStudent(${id}); return false;">
+                                                    <label for="ModalFirstName">First Name</label>
+                                                    <input id="ModalFirstName" class="form-control" type="text" name="firstName" value="${stu.firstName}" placeholder="Enter letters only (length must be 2 - 15)" required autocomplete="off" pattern="[A-Za-z]{2,15}" title="Only letters and length between 2 and 15 letters"/>
+
+                                                    <label for="ModalLastName">Last Name</label>
+                                                    <input id="ModalLastName" class="form-control" type="text" name="lastName" value="${stu.lastName}" placeholder="Enter letters only (length must be 2 - 15)" required  pattern="[A-Za-z]{2,15}" title="Only letters and length between 2 and 15 letters"/>
+
+                                                    <label for="Modalbirth">Birth Date ()from 01-01-195- to 31-12-2003)</label>
+                                                    <input id="Modalbirth" class="form-control" type="date" name="dateOfBirth" value="${stu.dateofBirth}" required min="1950-01-01" max="2003-12-31" autocomplete="off" />
+
+                                                    <label for="ModalFees">Tuition Fees</label>
+                                                    <input id="ModalFees" class="form-control" type="number" name="tuitionFees" min="0" max="100000" placeholder="Integer Number from 0 to 10000" value="${stu.tuitionFees}"  required autocomplete="off">
+                                            `);
+
+
+                    $(".modal-footer").empty().append(`
+                                    <button type="submit" form="updateStudent" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </form>
+                            `);
+
+
+                }
+            });
+        }
+
+
+        function updateStudent(id) {
+
+            var msg = "Student updated successfully!";
+            var student = new Student();
+            student.id = id;
+            students.forEach(function (student, i) {
+
+                if (student.id == id) {                                      
+                    $("#updateStudent").children("input").each(function () {
+
+                        var value = $(this).val();
+                        var attr = $(this).attr("firstName");
+                        console.log(attr);
+                        if (attr == "firstName") {
+                            student.firstName = value;
+                        }
+                        else if (attr == "lastName") {
+                            student.lastName = value;
+                        }
+                        else if (attr == "dateOfBirth") {
+                            student.dateOfBirth = value;
+                        }
+                        else if (attr == "tuitionFees") {
+                            student.tuitionFees = value;
+                        }
+                    });
+
+                    students.splice(i, 1);
+                    students.splice(student.id - 1, 0, student);
+
+
+
+
+                    $("tbody #stu-" + student.id).children(".studentData").each(function () {         
+
+                        var attr = $(this).attr("firstName");
+
+                        if (attr == "firstName") {
+                            $(this).text(student.firstName);
+                        }
+                        else if (attr == "lastName") {
+                            $(this).text(student.lastName);
+                        }
+                        else if (attr == "dateOfBirth") {
+                            $(this).text(student.dateOfBirth);
+                        }
+                        else if (attr == "tuitionFees") {
+                            $(this).text(student.tuitionFees);
+                        }
+                    });
+
+                    $(".modal").modal("toggle");
+                    flashMessage(msg);
+
+                }
+            });
+        }
+
+
+
+        function flashMessage(msg) {
+            $(".flashMsg").remove();
+            $(".container").prepend(`
+                                         <div class="col-sm-12 alert alert-dismissible alert-success" role="alert">
+                                           ${msg}
+                                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                             <span aria-hidden="true">&times;</span>
+                                         </button>
+                                         </div>
+                                    `);
+        }
+
+
+
+    </script>
+
+</body>
+</html>

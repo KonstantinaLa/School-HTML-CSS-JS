@@ -1,0 +1,310 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Assignment1</title>
+
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/umd/popper.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <style>
+        body {
+            height :100%;
+            width: 100%;
+            background-color: #ccc0c0;
+            font-family: 'Poppins',  'Arial Nova';
+            color:#222;
+        }
+
+        .navbar {
+            padding: 0.8rem;
+            background-color: #92bdba;
+        }
+
+        .navbar-nav li {
+            padding-right: 20px;
+            padding-top: 20px;
+        }
+        .nav-link{
+            font-size: 1.1em !important; 
+        }
+        
+        .carousel{
+            position:center;
+            padding:20px
+        }
+        .carousel img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        footer {
+            background-color: #92bdba;
+           
+            
+        }
+        .footer-copyright{
+            background-color:#76a8a2;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <!--First Header Row-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light sticky-top">
+                     
+                    <a class="navbar-brand " href="../Index.html"><img src="MEDIA/foto/hat.png" alt="Logo hat" width="70" /></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ">
+                                <a class="nav-link p-0" data-toggle="tooltip" href="../HTML/Students/Students.html">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../HTML/Trainers/Trainers.html">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../HTML/Courses/Courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../HTML/Assignments/Assignments.html">Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../HTML/Trainers-Course/Trainers Per Course.html">Trainers-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../HTML/Students-Course/Students Per Course.html">Students-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0 " href="../HTML/Assignments-Course/Assignments Per Course.html">Assignments-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0 " href="../HTML/Ass-Stu-Course/Assignment Per Student Per Course.html">Assignments-Students-Course</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+
+
+        <!--Image Slider-->
+
+        <div id="slides" class="carousel slide p-5 container container-sm container-sm container-md container-lg container-xl " data-ride="carousel">
+
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1"></li>
+                <li data-target="#slides" data-slide-to="2"></li>
+
+            </ul>
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <img src="MEDIA/foto/carousel1.jpg" alt="First Slide" class="active" width="101%" />
+                </div>
+                <div class="carousel-item ">
+                    <img src="MEDIA/foto/carousel2.png" alt="Second Slide" width="100%" />
+                </div>
+                <div class="carousel-item ">
+                    <img src="MEDIA/foto/carousel5.jpg" alt="Third Slide" width="63%" />
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#slides" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#slides" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <!--7 reasons why-->
+        <div class=" main p-2 container container-sm container-sm container-md container-lg container-xl">
+            <div class=" row welcome text-center">
+                <div class="col-12">
+                    <h1 class="display-4 p-5">7 Reasons why you should learn to code</h1>
+                </div>
+                <hr class="my-4" />
+                <div class="12">
+                    <div class="row text-center">
+                        <div class="p-3 col-sm-6 col-md-6 ">
+                            <h5> 1. Being Able to Turn an Idea Into an App </h5>
+                            <p>
+                                Knowing how to code, you can take matters in your hand and start bootstrapping one the same day. Save the trouble and build a working prototype yourself.
+                                When you know how to code — your imagination is the limit, as you could create anything you dream off.
+                            </p>
+                        </div>
+                        <div class="p-3  col-sm-6 col-md-6 ">
+                            <h5> 2. Programming Keeps Your Mind Active and Busy… for Life </h5>
+                            <p>
+                                The programming world is a fast-paced environment. What worked five years ago might not be the best approach today. Programming languages and frameworks evolve almost daily.
+                                If you’re “lucky” enough to carry a hyper-industrial personality,
+                                meaning you have to work at least six days out of the week — programming definitely keeps you busy as there’s a never-ending river of information to absorb.
+                            </p>
+                        </div>
+                        <div class="p-3  col-sm-6 col-md-6 ">
+                            <h5>3. Coding Teaches You How to Approach Problem-Solving</h5>
+                            <p>Coding is all about seeing the bigger picture which you can break down into smaller particles — those smaller particles being smaller tasks that you can actually finish.</p>
+                        </div>
+                        <div class="p-3 col-sm-6 col-md-6  ">
+                            <h5> 4. Automate Daily Tasks and Save Time</h5>
+                            <p>If you’re creative, there’s a chance you woke up one morning with a great idea and fantasized about building the next Apple or Snapchat. You might wonder…What now?</p>
+                        </div>
+                        <div class="p-3 col-sm-6 col-md-6  ">
+                            <h5>5. Job Security and a Great Salary</h5>
+                            <p>
+                                Of course, the salaries are great when working in tech.Coders are well paid because the job itself is demanding and difficult.
+                                You work around some of the smartest folks on the globe and they expect you to perform.
+                            </p>
+                        </div>
+                        <div class="p-3 col-sm-6 col-md-6  ">
+                            <h5>6. Fun Hobby</h5>
+                            <p>
+                                Not everyone has to work in a professional environment. Coding is much more than a corporate 9-5 job.
+                                Let your imagination run wild and code as many cool projects as your heart desires — no one can stop you.
+                                Coding can be a fun hobby for anyone, there are no entry barriers.
+                                Anyone who has an internet connection and a computer can start coding as of this moment. Coding adheres to no limitations.
+                            </p>
+                        </div>
+                        <div class="p-3 col-sm-12">
+                            <h5>7. Vibrant and Friendly Community</h5>
+                            <p>
+                                Coders are some of the most fun, adorable, and light-hearted people I’ve met.
+                            </p>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                </div>
+            </div>
+        </div>
+        
+        <!--Registration-->
+        <div></div><!--??????????????????????????????????????????????????-->
+
+
+        <!--What you are going to learn-->
+
+        <div class=" row text-center welcome p-5 ">
+            <div class="col-12 p-5">
+                <h1 class="display-4">What you are going to learn</h1>
+            </div>
+
+            <div class="p-3 col-sm-6 col-md-6  ">
+                <img src="MEDIA/foto/home page/C.png" width="100" />
+                <h5> C# </h5>
+                <p>A programming language developed by Microsoft that runs on the .NET Framework</p>
+            </div>
+            <div class="p-3 col-sm-6 col-md-6 ">
+
+                <img src="MEDIA/foto/home page/html.png" width="100" />
+                <h5>HTML is </h5>
+                <p>The standard markup language for Web pages</p>
+            </div>
+            <div class="p-3 col-sm-6 col-md-6 ">
+                <img src="MEDIA/foto/home page/css.png" width="100" />
+                <h5>CSS</h5>
+                <p>The language we use to style an HTML document</p>
+            </div>
+            <div class="p-3  col-sm-6 col-md-6 ">
+
+                <img src="MEDIA/foto/home page/js.png" width="100" />
+                <h5>JavaScript</h5>
+                <p>The programming language of the Web</p>
+            </div>
+            <div class="p-3 col-sm-12">
+                <img src="MEDIA/foto/home page/spl.png" width="100" />
+                <h5>SQL</h5>
+                <p>A standard language for storing, manipulating and retrieving data in databases</p>
+            </div>
+
+        </div>
+
+    </div>
+
+     <!--footer-->
+
+    <footer class=" font-small  pt-4">
+        <div class="container-fluid">
+            <!--Contact Info-->
+            <div class="row ">
+                <div class="col-sm-6 col-md-6 col-sm-12 p-3">
+
+                    <div class="col-12">
+                        <h4>Contact Info</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col col-md-12 col-sm-12 col-xs-12">
+
+                            <img src="MEDIA/foto/email.png" width="50" alt="email image" class="m-2" /><a class="p-3" href="mailto:info@peoplecertedu.org">info@peoplecertedu.org </a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <img src="MEDIA/foto/phone.png" width="50" alt="phone image" class="m-2" /><a href="tel:+302103729070" class="p-3">+30 210 37 29 070</a>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-md-12 col-sm-12 col-xs-12 col-sm-12">
+                            <img src="MEDIA/foto/Location (2).png" width="40" alt="Location photo" class="m-2" /><a target="_blank" class="p-3" href="https://www.google.com/maps/place/Omonoia+39,+Athina+105+64/@37.9807716,23.7300947,17z/data=!3m1!4b1!4m5!3m4!1s0x14a1bd3a371b1527:0xc814362af19d1764!8m2!3d37.9807716!4d23.7322834">Πανεπιστημίου 39, Αθήνα</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!--Social Media-->
+                <div class="row col-sm-6 col-md-6 p-3 ">
+                    <div class="col-12 ">
+                        <h4>Find us at social media</h4>
+                    </div>
+                    <div class="row">
+                        <!-- Facebook -->
+                        <div class="p-3 ">
+                            <a href="https://el-gr.facebook.com/login/web/" target="_blank">
+                                <img src="MEDIA/foto/Facebook.png" alt="" width="40" height="40" class="m-3">
+                            </a>
+                        </div>
+
+                        <!-- Twitter -->
+                        <div class="p-3">
+                            <a href="https://twitter.com/login?lang=el" target="_blank">
+                                <img src="MEDIA/foto/twitter.png" alt="" width="40" height="40" class="m-3">
+                            </a>
+                        </div>
+                        <!-- Instagram -->
+                        <div class="p-3">
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <img src="MEDIA/foto/Instagram.png" alt="" width="40" height="40" class="m-3">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer-copyright text-center py-3">
+            © 2021 Copyright
+        </div>
+    </footer>
+
+
+</body>
+</html>
