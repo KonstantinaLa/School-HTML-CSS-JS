@@ -3,8 +3,117 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-3.0.0.js"></script>
+    <script src="../../Scripts/umd/popper.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+
+    <link href="../../CSS/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+
+        <!--First Header Row-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-md navbar-light sticky-top">
+
+                    <a class="navbar-brand" href="../../Index.html"><img src="../../MEDIA/foto/hat.png" alt="Logo hat" width="70" /></a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link p-0" data-toggle="tooltip" href="../Students/Students.html">Students</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers/Trainers.html">Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0 " href="../Courses/Courses.html">Courses</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments/Assignments.html">Assignments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Trainers-Course/Trainers Per Course.html">Trainers-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Students-Course/Students Per Course.html">Students-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Assignments-Course/Assignments Per Course.html">Assignments-Course</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link p-0" href="../Ass-Stu-Course/Assignment Per Student Per Course.html">Assignments-Students-Course</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <!--Add Assignment-->
+        <div class="row">
+            <div class="col">
+
+                <div class="container">
+
+                    <h1 class="mb-5 p-3">Create Assignments</h1>
+
+                    <div class="mt-4 mb-0">
+                        <a class="btn btn-lg btn-add m-3 float-right" href="Assignments.html">Return to Assignments</a>
+                    </div>
+                    <br />
+                    <br />
+                    <form class="m-1">
+
+                        <div class="form-group">
+                            <label for="title">Title *</label>
+                            <input id="title" class="form-control" type="text" name="title" value="C# Project" placeholder="Enter letters only(length must be 2-15)" autocomplete="off" required pattern="[A-Za-z]{2,15}" title="Only letters and between 2 and 15 characters" />
+
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description *</label>
+                            <select id="description" name="description" class="form-control" required>
+                                <option>Individual</option>
+                                <option>Group</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subDate">Sub Date ()from 01-01-2021 to 31-12-2030) *</label>
+                            <input id="subDate" class="form-control" type="date" name="subDate" value="2021-04-15" required min="2021-01-01" max="2030-12-31" />
+                        </div>
+                        <div class="form-group">
+                            <label for="oralMark">Oral Mark *</label>
+                            <input id="oralMark" name="oralMark" type="number" class="form-control" value="50" placeholder="Number from 0-100" min="0" max="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="totalMark">Total Mark *</label>
+                            <input id="totalMark" name="totalMark" type="number" value="100" placeholder="Number from 0-100" class="form-control" min="0" max="100" required>
+                        </div>
+
+                        <button class="btn btn-sub btn-lg mt-4">Submit</button>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </body>
 </html>

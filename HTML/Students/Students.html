@@ -7,58 +7,8 @@
     <script src="../../Scripts/umd/popper.js"></script>
     <script src="../../Scripts/bootstrap.js"></script>
 
-    <style>
-        body {
-            background-color: #ccc0c0;
-            height: 100%;
-            width: 100%;
-            font-family: 'Poppins', 'Arial Nova';
-            color: #222;
-        }
-        .btn-add{
-            background-color:#574db5;
-            color:#e1e1e1;
-            margin-right:100px;
-        }
-        .btn-form {
-            background-color: #df9547;
-            color: #e0d0d0;
-        }
-        
-        .btn-red {
-            background-color: #e55e5e;
-            color: #e0d0d0;
-        }
+    <link href="../../CSS/StyleSheet.css" rel="stylesheet" />
 
-        .navbar {
-            padding: 0.8rem;
-            background-color: #92bdba;
-        }
-
-        .navbar-nav li {
-            padding-right: 20px;
-            padding-top: 20px;
-        }
-
-        .nav-link {
-            font-size: 1.1em !important;
-        }
-        .btn-edit {
-            background-color: #4853ae;
-            color: #e0d0d0;
-        }
-        .thead-color {
-            background-color: #b9c1c2;
-        }
-        .btn-sub {
-            background-color: #093ebb;
-            color: #e2d9d9;
-        } 
-
-       
-
-
-    </style>
 </head>
 <body>
     <header>
@@ -108,17 +58,15 @@
         </div>
 
     </header>
+
     <div class="container-fluid">
 
         <!--list of Students-->
         <div class="row">
             <div class="col">
 
-                <div class="container-lg container-fluid">
-                    <h1 class="mt-5">All Students</h1>
-                    <div class=" mt-4 mb-0 ">
-                        <a class="btn btn-lg btn-add m-3 float-right" href="Students_Add.html">Add Student</a>
-                    </div>
+                <div class="container-lg">
+                    <h1 class="mt-5 pb-5">All Students</h1>
 
                     <div class="mt-4 mb-0">
                         <table class="table table-hover">
@@ -134,62 +82,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!--<tr>
-                                    <td class="studentData" name="fname">Konstantinos</td>
-                                    <td class="studentData" name="lname">Kanistras</td>
-                                    <td>2/9/1999</td>
-                                    <td>200</td>
-                                    <td align="center">
-                                        <div class="btn-group">
-                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
-                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
 
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Marios</td>
-                                    <td>Papadatos</td>
-                                    <td>2/9/1990</td>
-                                    <td>300</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
-                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
-
-                                        </div>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Katerina</td>
-                                    <td>Antoniou</td>
-                                    <td>15/4/1990</td>
-                                    <td>200</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
-                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
-
-                                        </div>
-
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Manolis</td>
-                                    <td>Papadopoulos</td>
-                                    <td>1/4/1998</td>
-                                    <td>250</td>
-                                    <td>
-                                        <div class="btn-group">
-                                            <a class="btn btn-edit m-1 rounded-left rounded-right" href="Students_Edit.html">Edit</a>
-                                            <a class="btn btn-red m-1 rounded-left rounded-right" href="Students_Delete.html">Delete</a>
-
-                                        </div>
-                                    </td>
-                                </tr>-->
                             </tbody>
                         </table>
                     </div>
@@ -197,7 +90,6 @@
                 </div>
 
             </div>
-
 
         </div>
 
@@ -217,7 +109,7 @@
                 </div>
                 <div class="form-group">
                     <label for="dateOfBirth">Birth Date ()from 01-01-195- to 31-12-2003) *</label>
-                    <input id="dateOfBirth" class="form-control" type="date" name="dateοfBirth" required min="1950-01-01" max="2003-12-31" />
+                    <input id="dateOfBirth" class="form-control" type="date" name="dateOfBirth" required min="1950-01-01" max="2003-12-31" />
 
                 </div>
                 <div class="form-group">
@@ -256,8 +148,7 @@
 
     <script>
 
-        //den epitrepei na staloyn ta dedomena kai kani refresh
-
+        
         $("form").submit(function (e) {
             e.preventDefault();
         });
@@ -267,7 +158,7 @@
         $("#addbtn").click(function () {
             $("#StudentForm").slideToggle();
             $(this).text($(this).text() == "Close Form Students" ? "Open Form Students" : "Close Form Students" );
-            $(this).toggleClass("btn-form");     //ALLAXE TO XROMA
+            $(this).toggleClass("btn-form");    
         });
 
         function Student(id, firstName, lastName, dateOfBirth, tuitionFees) {
@@ -279,10 +170,10 @@
 
         }
 
-        var stu1 = new Student(1,"Konstantinos", "Kanistras","2/9/1998" , 200)
-        var stu2 = new Student(2, "Marios", "Papadatos", "12/9/1990" , 300)
-        var stu3 = new Student(3, "Katerina", "Antoniou", "15/4/1992" , 200)
-        var stu4 = new Student(4, "Manolis", "Papadopoulos", "1/4/1998" , 250)
+        var stu1 = new Student(1,"Konstantinos", "Kanistras","1998-02-09" , 200)
+        var stu2 = new Student(2, "Marios", "Papadatos", "1990-01-02" , 300)
+        var stu3 = new Student(3, "Katerina", "Antoniou", "1992-06-09" , 200)
+        var stu4 = new Student(4, "Manolis", "Papadopoulos", "2000-05-02" , 250)
 
         var students = [stu1, stu2, stu3, stu4];
 
@@ -295,8 +186,8 @@
             $("table > tbody:last-child").append(`
                                               <tr id="stu-${student.id}">
                                                  <td class="studentData" name="id">${student.id}</td>
-                                                 <td class="studentData" name="firstname">${student.firstName}</td>
-                                                 <td class="studentData" name="lastname">${student.lastName}</td>
+                                                 <td class="studentData" name="firstName">${student.firstName}</td>
+                                                 <td class="studentData" name="lastName">${student.lastName}</td>
                                                  <td class="studentData" name="dateOfBirth">${student.dateOfBirth}</td>
                                                  <td class="studentData" name="tuitionFees">${student.tuitionFees}</td>
                                                  <td align="center">
@@ -316,13 +207,13 @@
             var student = {}; 
             var nameInput = $('input[name = "firstName"]').val();
             var lastnameInput = $("input[name = 'lastName']").val();
-            var dateofBirthInput = $("input[name = 'dateofBirth']").val();
+            var dateOfBirthInput = $("input[name = 'dateOfBirth']").val();
             var tuitionFeesInput = $("input[name = 'tuitionFees']").val();
 
             
             student["firstName"] = nameInput;
             student["lastName"] = lastnameInput;
-            student["dateofBirth"] = dateofBirthInput;
+            student["dateOfBirth"] = dateOfBirthInput;
             student["tuitionFees"] = tuitionFeesInput;
             student.id = students[students.length - 1].id + 1;
 
@@ -335,7 +226,7 @@
 
             $('input[name = "firstName"]').val('');
             $('input[name = "lastName"]').val('');
-            $('input[name = "dateofBirth"]').val('');
+            $('input[name = "dateOfBirth"]').val('');
             $('input[name = "tuitionFees"]').val('');
 
 
@@ -352,6 +243,7 @@
                     flashMessage(msg);
                 }
             });
+            
         }
             
 
@@ -364,8 +256,10 @@
                     $("#ModalLabel").text('Edit Student: ' + stu.firstName + " " + stu.lastName);
 
                     $(".modal-body").empty();
+
                     $(".modal-body").append(` 
                                                 <form id="updateStudent" action="" onsubmit="updateStudent(${id}); return false;">
+
                                                     <label for="ModalFirstName">First Name</label>
                                                     <input id="ModalFirstName" class="form-control" type="text" name="firstName" value="${stu.firstName}" placeholder="Enter letters only (length must be 2 - 15)" required autocomplete="off" pattern="[A-Za-z]{2,15}" title="Only letters and length between 2 and 15 letters"/>
 
@@ -373,7 +267,7 @@
                                                     <input id="ModalLastName" class="form-control" type="text" name="lastName" value="${stu.lastName}" placeholder="Enter letters only (length must be 2 - 15)" required  pattern="[A-Za-z]{2,15}" title="Only letters and length between 2 and 15 letters"/>
 
                                                     <label for="Modalbirth">Birth Date ()from 01-01-195- to 31-12-2003)</label>
-                                                    <input id="Modalbirth" class="form-control" type="date" name="dateOfBirth" value="${stu.dateofBirth}" required min="1950-01-01" max="2003-12-31" autocomplete="off" />
+                                                    <input id="Modalbirth" class="form-control" type="date" name="dateOfBirth" value="${stu.dateOfBirth}" required min="1950-01-01" max="2003-12-31" autocomplete="off" />
 
                                                     <label for="ModalFees">Tuition Fees</label>
                                                     <input id="ModalFees" class="form-control" type="number" name="tuitionFees" min="0" max="100000" placeholder="Integer Number from 0 to 10000" value="${stu.tuitionFees}"  required autocomplete="off">
@@ -403,8 +297,9 @@
                     $("#updateStudent").children("input").each(function () {
 
                         var value = $(this).val();
-                        var attr = $(this).attr("firstName");
-                        console.log(attr);
+                        var attr = $(this).attr("name");
+                        
+
                         if (attr == "firstName") {
                             student.firstName = value;
                         }
@@ -427,7 +322,7 @@
 
                     $("tbody #stu-" + student.id).children(".studentData").each(function () {         
 
-                        var attr = $(this).attr("firstName");
+                        var attr = $(this).attr("name");
 
                         if (attr == "firstName") {
                             $(this).text(student.firstName);
@@ -441,29 +336,30 @@
                         else if (attr == "tuitionFees") {
                             $(this).text(student.tuitionFees);
                         }
+
                     });
-
-                    $(".modal").modal("toggle");
-                    flashMessage(msg);
-
                 }
             });
+            $(".modal").modal("toggle");
+            flashMessage(msg);
         }
 
-
+        
 
         function flashMessage(msg) {
             $(".flashMsg").remove();
             $(".container").prepend(`
-                                         <div class="col-sm-12 alert alert-dismissible alert-success" role="alert">
+                                         <div class="col-sm-12 alert msg alert-dismissible alert-info" role="alert">
                                            ${msg}
                                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                              <span aria-hidden="true">&times;</span>
                                          </button>
                                          </div>
                                     `);
+            
+            setTimeout( () => ($(".msg").fadeOut(800)), 2000); 
+           
         }
-
 
 
     </script>
